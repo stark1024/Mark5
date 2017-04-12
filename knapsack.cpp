@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
     char items[4] = {'A', 'B', 'C', 'D'};
-    int value[4] = {100, 240, 300, 500};
+    int value[4] = {200, 240, 140, 150};
     int wt[4] = {1, 3, 2, 5};
     int density[4], i, j, cap, t, max=0;
     char temp;
