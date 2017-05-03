@@ -10,35 +10,37 @@ struct node{
 
 struct node *point = NULL;
 
+int ls = 0;
 int list[4] = {5, 7, 3, 4};
 
-int least(){
-	int min = list[0], i;
-	for(i=0; i<4; i++){
-		if(min>list[i])
-			min = list[i];
+void sort(int k){
+	 int i,j,t;
+	 for(i=k; i<4; i++){
+        for(j=i; j<4; j++){
+            if(list[i]>list[j]){
+                t = list[i];
+                list[i] = list[j];
+				list[j] = t;
+			}
+		}
 	}
-	return min;
 }
 
-void rem(int n){
-	int i;
-	for(i=0; list[i]!=n; i++){}
-	list[i] = 
-}
-
-void ins(int a){
+void ins(int a, int b){
 	node *n, *r, *l;
 	n = new node;
 	r = new node;
 	l = new node;
 	n->left = l;
 	n->right = r;
-	r->wt = least;
-	
+	l->wt = a;
+	r->wt = b;
+	n->wt = a+b;
 }
 
 int main(){
+	sort();
+	
 	
 return 0;
 }
